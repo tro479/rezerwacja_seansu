@@ -5,21 +5,35 @@ class Repertuar():
     opis_filmu2 = open("opis_filmu2.txt", encoding="utf8")
     opis_filmu3 = open("opis_filmu3.txt", encoding="utf8")
 
+    def wyswietl_repertuar(self):
+        """Wyświelenie na ekranie repertuaru."""
+
+        print("REPTERTUAR")
+        for tytul in self.opis_filmu1.readlines(1):
+            print(f"\t1. {tytul.strip()}")
+            self.opis_filmu1.close()
+        for tytul in self.opis_filmu2.readlines(1):
+            print(f"\t2. {tytul.strip()}")
+            self.opis_filmu2.close()
+        for tytul in self.opis_filmu3.readlines(1):
+            print(f"\t3. {tytul.strip()}")
+            self.opis_filmu3.close()
+
     def wyswietl_tytul(self, nr_filmu):
         """Wyświetlenie na ekranie tytułu filmu."""
 
         if nr_filmu == 1:
             for tytul in self.opis_filmu1.readlines(1):
                 print(f"\t1. {tytul.strip()}")
-            self.opis_filmu1.close()
+                self.opis_filmu1.close()
         elif nr_filmu == 2:
             for tytul in self.opis_filmu2.readlines(1):
                 print(f"\t2. {tytul.strip()}")
-            self.opis_filmu2.close()
+                self.opis_filmu2.close()
         elif nr_filmu == 3:
             for tytul in self.opis_filmu3.readlines(1):
                 print(f"\t3. {tytul.strip()}")
-            self.opis_filmu3.close()
+                self.opis_filmu3.close()
         else:
             print("Nie wybrano nr filmu.")
 
