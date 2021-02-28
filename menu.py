@@ -5,7 +5,7 @@ aktualne_filmy = Repertuar()
 while True:
 
     print()
-    print("0- wyświetl repertuar.")
+    print("0- Wyświetl repertuar.")
     print("1- Zobacz opis filmu nr 1.")
     print("2- Zobacz opis filmu nr 2.")
     print("3- Zobacz opis filmu nr 3.")
