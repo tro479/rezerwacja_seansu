@@ -1,6 +1,8 @@
 from repertuar import Repertuar
+from rezerwacja import Rezerwacja
 
 aktualne_filmy = Repertuar()
+rezerwacja_filmow = Rezerwacja()
 
 while True:
 
@@ -24,8 +26,19 @@ while True:
     elif wybor_uzytkownika == 3:
         aktualne_filmy.wyswietl_opis(3)
     elif wybor_uzytkownika == 4:
-        print("Trwają pracę nad tą częścią kodu.")
+        wybor_filmu = int(input("Wybierz nr filmu do rezerwacji: "))
+        if wybor_filmu == 1:
+            rezerwacja_filmow.rezerwowanie_seansu(1)
+        elif wybor_filmu == 2:
+            rezerwacja_filmow.rezerwowanie_seansu(2)
+        elif wybor_filmu == 3:
+            rezerwacja_filmow.rezerwowanie_seansu(3)
+        else:
+            print("Nie wybrano żadnej dostępnej opcji.")
     elif wybor_uzytkownika == 5:
         break
     else:
         print("Nie wybrano żadnej dostępnej opcji.")
+
+aktualne_filmy.zamkniecie_plikow()
+rezerwacja_filmow.zamkniecie_plikow()
