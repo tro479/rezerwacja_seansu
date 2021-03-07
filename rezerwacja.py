@@ -1,3 +1,5 @@
+import re
+
 class Rezerwacja():
     """Klasa umożliwiająca rezerwację seansu."""
 
@@ -17,7 +19,17 @@ class Rezerwacja():
                 if imie.lower() != "q":
                     nazwisko = input("podaj nazwisko (q- wyjście): ")
                     if nazwisko.lower() != "q":
-                        mail = input("podaj adres e-mail (q- wyjście): ")
+                        while True:
+                            mail = input("podaj adres e-mail (q- wyjście): ")
+                            wzor = "^([A-Za-z0-9]+|[A-Za-z0-9]+[\.-]" \
+                                   "[A-Za-z0-9]+)@([A-Za-z0-9]+|[A-Za-z0-9]+" \
+                                   "[\.-][A-Za-z0-9]+)\.[A-Za-z0-9]+$"
+                            if mail.lower() == "q":
+                                break
+                            elif re.match(wzor, mail):
+                                break
+                            else:
+                                print("Błędny adres e-mail.")
                         if mail.lower() != "q":
                             klient = (imie, nazwisko, mail)
                             print(f"Została dokonana rezerwacja"
@@ -39,7 +51,17 @@ class Rezerwacja():
                 if imie.lower() != "q":
                     nazwisko = input("podaj nazwisko (q- wyjście): ")
                     if nazwisko.lower() != "q":
-                        mail = input("podaj adres e-mail (q- wyjście): ")
+                        while True:
+                            mail = input("podaj adres e-mail (q- wyjście): ")
+                            wzor = "^([A-Za-z0-9]+|[A-Za-z0-9]+[\.-]" \
+                                   "[A-Za-z0-9]+)@([A-Za-z0-9]+|[A-Za-z0-9]+" \
+                                   "[\.-][A-Za-z0-9]+)\.[A-Za-z0-9]+$"
+                            if mail.lower() == "q":
+                                break
+                            elif re.match(wzor, mail):
+                                break
+                            else:
+                                print("Błędny adres e-mail.")
                         if mail.lower() != "q":
                             klient = (imie, nazwisko, mail)
                             print(f"Została dokonana rezerwacja"
@@ -61,7 +83,17 @@ class Rezerwacja():
                 if imie.lower() != "q":
                     nazwisko = input("podaj nazwisko (q- wyjście): ")
                     if nazwisko.lower() != "q":
-                        mail = input("podaj adres e-mail (q- wyjście): ")
+                        while True:
+                            mail = input("podaj adres e-mail (q- wyjście): ")
+                            wzor = "^([A-Za-z0-9]+|[A-Za-z0-9]+[\.-]" \
+                                   "[A-Za-z0-9]+)@([A-Za-z0-9]+|[A-Za-z0-9]+" \
+                                   "[\.-][A-Za-z0-9]+)\.[A-Za-z0-9]+$"
+                            if mail.lower() == "q":
+                                break
+                            elif re.match(wzor, mail):
+                                break
+                            else:
+                                print("Błędny adres e-mail.")
                         if mail.lower() != "q":
                             klient = (imie, nazwisko, mail)
                             print(f"Została dokonana rezerwacja"
