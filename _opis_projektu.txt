@@ -1,0 +1,3 @@
+Program umożliwiający przejrzenie repertuaru, zobaczenie opisu filmów i rezerwację seansu.
+Repertuar i opisu filmów są wczytywane z istniejących plików.
+Rezerwacje są dopisywane w utworzonych plikach.
